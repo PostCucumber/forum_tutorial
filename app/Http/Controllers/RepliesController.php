@@ -21,10 +21,9 @@ class RepliesController extends Controller
      */
     public function store($channelID, Thread $thread)
     {
-        // dd(request()->all());
         $thread->addReply([
             'thread_id' => request('thread_id'),
-            'user_id' => request('user_id'),    
+            'user_id' => auth()->id(),    
             'body' => request('body'),
         ]);
 

@@ -12,7 +12,7 @@
     <!-- Styles -->
     <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
-<body class="bg-gray-100 h-screen antialiased leading-none">
+<body class="bg-gray-100 h-screen antialiased leading-normal">
     <div id="app">
         <nav class="bg-blue-900 shadow mb-8 py-6">
             <div class="container mx-auto px-6 md:px-0">
@@ -27,13 +27,18 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down inline-block"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </a>
                             <ul class="dropdown-menu absolute hidden p-4 bg-gray-100 rounded shadow w-40 h-auto overflow-auto">
-                                <li class="py-1">
+                                <li class="py-2">
                                     <a href="/threads">
-                                        All Threads
+                                        Recent Threads
+                                    </a>
+                                </li>
+                                <li class="py-2">
+                                    <a href="/threads?popular=1">
+                                        Popular Threads
                                     </a>
                                 </li>
                                 @if(Auth::check())
-                                    <li class="py-1">
+                                    <li class="py-2">
                                         <a href="/threads?by={{ auth()->user()->name }}">
                                             My Threads
                                         </a>
@@ -51,7 +56,7 @@
                             </a>
                             <ul class="dropdown-menu absolute hidden p-4 bg-gray-100 rounded shadow w-40 h-64 overflow-auto">
                                 @foreach($channels as $channel)
-                                    <li class="pb-2">
+                                    <li class="py-2">
                                         <a href="/threads/{{ $channel->slug }}">
                                             {{ $channel->name }}
                                         </a>

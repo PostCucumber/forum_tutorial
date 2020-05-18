@@ -2,7 +2,7 @@
     <div class="w-full p-6">
         <div class="flex items-center pb-4">
             <p class="flex-1">
-                <a href="#">
+                <a href="/profiles/{{ $reply->owner->name }}">
                     {{ $reply->owner->name }}
                 </a>
                 said {{ $reply->created_at->diffForHumans() }}

@@ -10,7 +10,7 @@
             @endif
             <div class="flex flex-col break-words w-full bg-white border border-2 rounded shadow-md mb-4">
                 <div class="font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0">
-                    <span class="font-thin text-sm"><a href="#">{{ $thread->owner->name }}</a> posted</span> <h2 class="pt-2">{{ $thread->title }}</h2>
+                    <span class="font-thin text-sm"><a href="/profiles/{{ $thread->owner->name }}">{{ $thread->owner->name }}</a> posted</span> <h3>{{ $thread->title }}</h3>
                 </div>
                 <div class="w-full p-6">
                     <p class="text-gray-700 break-all leading-normal">

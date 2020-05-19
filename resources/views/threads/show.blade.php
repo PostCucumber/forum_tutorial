@@ -9,8 +9,18 @@
                 </div>
             @endif
             <div class="flex flex-col break-words w-full bg-white border border-2 rounded shadow-md mb-4">
-                <div class="font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0">
-                    <span class="font-thin text-sm"><a href="/profiles/{{ $thread->owner->name }}">{{ $thread->owner->name }}</a> posted</span> <h3>{{ $thread->title }}</h3>
+                <div class="flex items-center font-semibold bg-gray-200 text-gray-700 py-3 px-6 mb-0">
+                    <div class="flex-1">
+                        <span class="font-thin text-sm"><a href="/profiles/{{ $thread->owner->name }}">{{ $thread->owner->name }}</a> posted</span>
+                        <h3>{{ $thread->title }}</h3>
+                    </div>
+                    @can('update', $thread)
+                        <form action="{{ $thread->path() }}" method="POST">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+                            <button type="submit">delete thread</button>
+                        </form>
+                    @endcan
                 </div>
                 <div class="w-full p-6">
                     <p class="text-gray-700 break-all leading-normal">

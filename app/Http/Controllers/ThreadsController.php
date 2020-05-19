@@ -15,6 +15,11 @@ class ThreadsController extends Controller
         $this->middleware('auth')->except(['index','show']);    
     }
 
+    protected function boot()
+    {
+        parent::boot();
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -109,9 +114,19 @@ class ThreadsController extends Controller
      * @param  \App\Thread  $thread
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Thread $thread)
+    public function destroy($channel, Thread $thread)
     {
-        //
+        $this->authorize('update', $thread);
+
+        $thread->replies()->delete();
+        $thread->delete();   
+
+        if(request()->wantsJson())
+        {
+            return response([], 204);
+        }
+        
+        return redirect('/threads');
     }
 
     public function getThreads($channel, $filters)

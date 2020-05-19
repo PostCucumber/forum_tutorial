@@ -490,9 +490,11 @@ class ComposerStaticInite4c342b514b384afbcea0c4ab8d7c3cb
     );
 
     public static $classMap = array (
+        'App\\Activity' => __DIR__ . '/../..' . '/app/Activity.php',
         'App\\Channel' => __DIR__ . '/../..' . '/app/Channel.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Favoritable' => __DIR__ . '/../..' . '/app/Favoritable.php',
         'App\\Favorite' => __DIR__ . '/../..' . '/app/Favorite.php',
         'App\\Filters\\Filters' => __DIR__ . '/../..' . '/app/Filters/Filters.php',
         'App\\Filters\\ThreadFilters' => __DIR__ . '/../..' . '/app/Filters/ThreadFilters.php',
@@ -505,6 +507,7 @@ class ComposerStaticInite4c342b514b384afbcea0c4ab8d7c3cb
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\FavoritesController' => __DIR__ . '/../..' . '/app/Http/Controllers/FavoritesController.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
+        'App\\Http\\Controllers\\ProfilesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProfilesController.php',
         'App\\Http\\Controllers\\RepliesController' => __DIR__ . '/../..' . '/app/Http/Controllers/RepliesController.php',
         'App\\Http\\Controllers\\ThreadsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ThreadsController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
@@ -515,6 +518,7 @@ class ComposerStaticInite4c342b514b384afbcea0c4ab8d7c3cb
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Policies\\ThreadPolicy' => __DIR__ . '/../..' . '/app/Policies/ThreadPolicy.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
@@ -4626,8 +4630,10 @@ class ComposerStaticInite4c342b514b384afbcea0c4ab8d7c3cb
         'Tests\\Feature\\CreateThreadsTest' => __DIR__ . '/../..' . '/tests/Feature/CreateThreadsTest.php',
         'Tests\\Feature\\FavoritesTest' => __DIR__ . '/../..' . '/tests/Feature/FavoritesTest.php',
         'Tests\\Feature\\ParticipateInForumTest' => __DIR__ . '/../..' . '/tests/Feature/ParticipateInForumTest.php',
+        'Tests\\Feature\\ProfilesTest' => __DIR__ . '/../..' . '/tests/Feature/ProfilesTest.php',
         'Tests\\Feature\\ReadThreadsTest' => __DIR__ . '/../..' . '/tests/Feature/ReadThreadsTest.php',
         'Tests\\TestCase' => __DIR__ . '/../..' . '/tests/TestCase.php',
+        'Tests\\Unit\\ActivityTest' => __DIR__ . '/../..' . '/tests/Unit/ActivityTest.php',
         'Tests\\Unit\\ChannelTest' => __DIR__ . '/../..' . '/tests/Unit/ChannelTest.php',
         'Tests\\Unit\\ExampleTest' => __DIR__ . '/../..' . '/tests/Unit/ExampleTest.php',
         'Tests\\Unit\\ReplyTest' => __DIR__ . '/../..' . '/tests/Unit/ReplyTest.php',

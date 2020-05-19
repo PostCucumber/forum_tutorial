@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use ReflectionClass;
 
 class Thread extends Model
 {
@@ -22,6 +23,15 @@ class Thread extends Model
 
         static::addGlobalScope('channel', function ($builder) {
             $builder->with('channel');
+        });
+
+        static::created(function ($thread) {
+            Activity::create([
+                'user_id' => auth()->id(),
+                'type' => 'created_' . strtolower((new ReflectionClass($thread))->getShortName()),
+                'subject_id' => $thread->id,
+                'subject_type' => get_class($thread)
+            ]);
         });
     }
 

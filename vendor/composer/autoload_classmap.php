@@ -6,9 +6,11 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\Activity' => $baseDir . '/app/Activity.php',
     'App\\Channel' => $baseDir . '/app/Channel.php',
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Favoritable' => $baseDir . '/app/Favoritable.php',
     'App\\Favorite' => $baseDir . '/app/Favorite.php',
     'App\\Filters\\Filters' => $baseDir . '/app/Filters/Filters.php',
     'App\\Filters\\ThreadFilters' => $baseDir . '/app/Filters/ThreadFilters.php',
@@ -21,6 +23,7 @@ return array(
     'App\\Http\\Controllers\\Controller' => $baseDir . '/app/Http/Controllers/Controller.php',
     'App\\Http\\Controllers\\FavoritesController' => $baseDir . '/app/Http/Controllers/FavoritesController.php',
     'App\\Http\\Controllers\\HomeController' => $baseDir . '/app/Http/Controllers/HomeController.php',
+    'App\\Http\\Controllers\\ProfilesController' => $baseDir . '/app/Http/Controllers/ProfilesController.php',
     'App\\Http\\Controllers\\RepliesController' => $baseDir . '/app/Http/Controllers/RepliesController.php',
     'App\\Http\\Controllers\\ThreadsController' => $baseDir . '/app/Http/Controllers/ThreadsController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
@@ -31,6 +34,7 @@ return array(
     'App\\Http\\Middleware\\TrimStrings' => $baseDir . '/app/Http/Middleware/TrimStrings.php',
     'App\\Http\\Middleware\\TrustProxies' => $baseDir . '/app/Http/Middleware/TrustProxies.php',
     'App\\Http\\Middleware\\VerifyCsrfToken' => $baseDir . '/app/Http/Middleware/VerifyCsrfToken.php',
+    'App\\Policies\\ThreadPolicy' => $baseDir . '/app/Policies/ThreadPolicy.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',
@@ -4142,8 +4146,10 @@ return array(
     'Tests\\Feature\\CreateThreadsTest' => $baseDir . '/tests/Feature/CreateThreadsTest.php',
     'Tests\\Feature\\FavoritesTest' => $baseDir . '/tests/Feature/FavoritesTest.php',
     'Tests\\Feature\\ParticipateInForumTest' => $baseDir . '/tests/Feature/ParticipateInForumTest.php',
+    'Tests\\Feature\\ProfilesTest' => $baseDir . '/tests/Feature/ProfilesTest.php',
     'Tests\\Feature\\ReadThreadsTest' => $baseDir . '/tests/Feature/ReadThreadsTest.php',
     'Tests\\TestCase' => $baseDir . '/tests/TestCase.php',
+    'Tests\\Unit\\ActivityTest' => $baseDir . '/tests/Unit/ActivityTest.php',
     'Tests\\Unit\\ChannelTest' => $baseDir . '/tests/Unit/ChannelTest.php',
     'Tests\\Unit\\ExampleTest' => $baseDir . '/tests/Unit/ExampleTest.php',
     'Tests\\Unit\\ReplyTest' => $baseDir . '/tests/Unit/ReplyTest.php',
